@@ -1,0 +1,91 @@
+<h1 style="text-align:center;">New User</h1>
+<style>
+  div{
+    text-align:center;
+    font-size:20px;
+    /* color:blue; */
+
+  }
+  input{
+    padding:8px;
+    border-radius:20px;
+    margin: 5px;
+  }
+  textarea{
+    padding:8px;
+    border-radius:20px;
+    margin: 5px;
+  }
+</style>
+<%= form_with model: @user do |form| %>
+<div >
+
+    <%= form.label :firstname %><br>
+    <%= form.text_field :first_name %><br>
+    <% @user.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+    
+    <% end %>
+  
+    <%= form.label :lastname %><br>
+    <%= form.text_field :last_name %><br>
+    <% @user.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div >
+    <%= form.label :Email %><br>
+    <%= form.text_field :email %><br>
+    <% @user.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Address %><br>
+    <%= form.text_area :address %><br>
+    <% @user.errors.full_messages_for(:address).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+      <%= form.label :City %><br>
+    <%= form.text_area :city %><br>
+    <% @user.errors.full_messages_for(:city).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+      <%= form.label :State %><br>
+    <%= form.text_area :state %><br>
+    <% @user.errors.full_messages_for(:state).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div >
+    <%= form.label :Adhar_number%><br>
+    <%= form.text_field :adhar_number %><br>
+    <% @user.errors.full_messages_for(:adhar_number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  
+    <%= form.label :Contact_number %><br>
+    <%= form.text_field :contact_number %><br>
+    <% @user.errors.full_messages_for(:contact_number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+    <%= form.label :Password %><br>
+    <%= form.text_field :password %><br>
+    <% @user.errors.full_messages_for(:password).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  
+</div>
+
+  <div>
+    <br><%= form.delete %>
+  </div>
+<% end %>
