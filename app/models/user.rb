@@ -14,7 +14,8 @@ class User < ApplicationRecord
     # validates :age, comparision: {greater_than_or_equal_to: 18}
     validates :adhar_number, uniqueness: true, numericality: {only_integer: true}
 
-    belongs_to :product 
+    belongs_to :product , optional: true
+
     # def check_first_name
     #     errors.add(:first_name, "do not use this ") if first_name == "Anushka"
     # end
