@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     #  redirect_to "/users/#{@user.id}"
 		  # render json: UserSerializer.new(@user)
 			render json: @user
-			UserMailer.newuser(@user).deliver_now
+			# UserMailer.newuser(@user).deliver_now
       else
         render json: @user.errors
 				# render json: ErrorSerializer.new(@user.errors.to_hash), status: :bad_request
@@ -72,7 +72,7 @@ private #strong paramter
         #   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :address, :contact_number, :password, :city, :state, :age, :adhar_number) #.permit=> used for permission
+    params.require(:user).permit(:first_name, :last_name, :email, :address, :contact_number, :password, :city, :state, :age, :adhar_number, :product_id) #.permit=> used for permission
       end
   # def user_params
   #   params.require(:user).permit(:first_name, :last_name, :email, :address, :contact_number, :password, :city, :state, :age, :adhar_number) #.permit=> used for permission
