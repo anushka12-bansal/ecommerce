@@ -7,7 +7,7 @@ skip_before_action :verify_authenticity_token
     end
 
     def create
-        byebug
+       
     @product= Product.new(product_params)
     if @product.save
         render json: ProductSerializer.new(@product)
@@ -18,6 +18,6 @@ end
 
     private
     def product_params
-        params.require(:product).permit(:name, :price, :manufacturing_date, :description,:expire_date,:manufactured_by)
+        params.require(:product).permit(:name, :price, :manufacturing_date, :description,:expire_date, :manufactured_by)
     end
 end
