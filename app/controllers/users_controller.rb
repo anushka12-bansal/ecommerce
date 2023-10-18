@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       end
             
     def create 
-			# byebug
+	
      @user = User.new(user_params) 
       if @user.save
     #  redirect_to "/users/#{@user.id}"
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     end
 
    def index
-		# byebug
+	
    @user=User.all
    render json: @user, each_serializer: UserSerializer
    end
@@ -53,7 +53,7 @@ end
 
 
     def delete
-        # byebug
+       
       @user=User.find(params[:id])
       if @user.present?
        @user.destroy
