@@ -15,7 +15,6 @@ class User < ApplicationRecord
     validates :adhar_number, uniqueness: true, numericality: {only_integer: true}
 
     belongs_to :product 
-
     # def check_first_name
     #     errors.add(:first_name, "do not use this ") if first_name == "Anushka"
     # end
