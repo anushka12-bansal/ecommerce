@@ -14,6 +14,8 @@ gem "sprockets-rails"
 # gem "sqlite3", "~> 1.4"gem
 gem 'pg', '~> 1.5.4'
 gem 'active_model_serializers'
+gem 'fast_jsonapi'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
