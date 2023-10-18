@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   # post "users/", to: "users#create"
   resources :users
+  resources :products
   # resources :books
   # get "users/", to: "users#index"
   # get "users/new", to: "users#new"
